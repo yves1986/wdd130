@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gnenessemin Djeamin Yves | WDD 130</title>
-    <!-- Add meta tags as requested-->
+
+    <!-- Meta tags améliorés -->
     <meta name="description"
       content="Home page of Gnenessemin Djeamin Yves for WDD130 course at BYU-Idaho. Student from Bingerville, Cote d'Ivoire studying web development and programming.">
     <meta name="author" content="Gnenessemin Djeamin Yves">
+
     <!-- Link to the CSS file -->
     <link rel="stylesheet" href="styles/styles.css">
 </head>
@@ -22,26 +24,34 @@
     </header>
 
     <main>
-        <h1>Gnenessemin Djeamin Yves | WDD 130</h1>
-        <img src="images/profile.png" alt="Gnenessemin Djeamin Yves" width="200">
-        <p>Hello! My name is Gnenessemin and I am from Bingerville, Cote d'Ivoire.
-            I enjoy football. I am currently studying Programming.
-            I am excited to learn more about web development and design.
-            I am looking forward to creating my own website and learning more about the industry.
-            I am excited to see what the future holds for me.</p>
-    </main>
+        <!-- Section principale avec grid pour une meilleure disposition -->
+        <div class="main-content">
+            <section class="profile-section">
+                <h1>Gnenessemin Djeamin Yves | WDD 130</h1>
+                <img src="images/profile.png" alt="Portrait of Gnenessemin Djeamin Yves"
+                  width="200">
+                <p>Hello! My name is Gnenessemin and I am from Bingerville, Cote d'Ivoire.
+                    I enjoy football. I am currently studying Programming.
+                    I am excited to learn more about web development and design.
+                    I am looking forward to creating my own website and learning more about the
+                    industry.
+                    I am excited to see what the future holds for me.</p>
+            </section>
 
-    <!-- the side element as requested-->
-    <aside>
-        <h2>Cote d'Ivoire</h2>
-        <!-- good image-->
-        <img src="images/cote-d'ivoire.jpg" alt="Cote d'Ivoire landscape" width="200">
-        <p>Cote d'Ivoire, also known as Ivory Coast, is a country in West Africa.
-            It is known for its beautiful beaches, rich cultural heritage, and being
-            the world's largest producer of cocoa. The economic capital is Abidjan,
-            and the country is famous for its hospitality, diverse ethnic groups,
-            and vibrant music and dance traditions.</p>
-    </aside>
+            <!-- L'aside est maintenant à l'intérieur du main mais séparé sémantiquement -->
+            <aside class="country-info">
+                <h2>Cote d'Ivoire</h2>
+                <!-- Nom de fichier corrigé pour éviter les apostrophes -->
+                <img src="images/cote-divoire.jpg"
+                  alt="Beautiful landscape of Cote d'Ivoire with palm trees and beach" width="200">
+                <p>Cote d'Ivoire, also known as Ivory Coast, is a country in West Africa.
+                    It is known for its beautiful beaches, rich cultural heritage, and being
+                    the world's largest producer of cocoa. The economic capital is Abidjan,
+                    and the country is famous for its hospitality, diverse ethnic groups,
+                    and vibrant music and dance traditions.</p>
+            </aside>
+        </div>
+    </main>
 
     <footer>
         <p>©2025 🌹 GNENESSEMIN DJEAMIN YVES 🌹 BINGERVILLE, COTE D'IVOIRE</p>
