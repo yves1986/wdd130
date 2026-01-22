@@ -1,133 +1,129 @@
-/* Reset de base */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* RÈGLES REQUISES PAR LE COURS */
-
-/* 1. Règle nav avec background-color et padding */
-nav {
-    background-color: #2c3e50;
-    padding: 1rem;
-    display: flex;
-    gap: 2rem;
+body {
+    font-size: 16px;
+    font-family: Roboto, Arial, sans-serif;
 }
 
-/* 2. Règle nav a avec color, padding, et display: block */
+/* Navigation */
+nav {
+    background-color: steelblue;
+    padding: 10px;
+}
+
 nav a {
     color: white;
-    padding: 0.5rem 1rem;
+    padding: 10px;
     display: block;
     text-decoration: none;
 }
 
-/* 3. Règle main avec max-width */
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Main content */
 main {
-    max-width: 840px;
+    max-width: 640px;
     margin: 0 auto;
 }
 
-/* 4. Règle h1 avec color (déjà présente) */
 h1 {
-    color: #2c3e50;
-    border-bottom: 3px solid #3498db;
-    padding-bottom: 0.5rem;
+    color: steelblue;
+    padding: .5rem;
+    border-bottom: 2px solid steelblue;
     margin-bottom: 1rem;
 }
 
-/* 5. Règle main img avec toutes les propriétés requises */
+/* Profile image */
 main img {
     width: 150px;
     height: auto;
-    border: 1px solid #ccc;
+    border: 1px solid steelblue;
     padding: 2px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 30px gray;
     float: right;
     margin: 0 0 1rem 1rem;
 }
 
-/* 6. Règle aside avec toutes les propriétés requises */
-aside {
-    width: 300px;
+/* Paragraphs */
+p {
     margin: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    padding: 1rem;
-    background-color: #f8f9fa;
-    color: #333;
+    line-height: 1.5;
+}
+
+/* Aside section */
+aside {
+    width: 20em;
     text-align: center;
     position: relative;
 }
 
-/* 7. Règle aside img avec width: 200px et height: auto */
 aside img {
     width: 200px;
     height: auto;
     display: block;
-    margin: 0 auto 1rem auto;
+    margin: 0 auto;
 }
 
-/* 8. Règle p avec padding: 0 */
-p {
-    padding: 0;
-    margin: 1rem 0;
+/* Overlay heading on aside image */
+aside h2 {
+    position: absolute;
+    top: 67px;
+    left: 150px;
+    background-color: rgba(70, 130, 180, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
 }
 
-/* 9. Règle footer avec margin-top, border-top, text-align: center */
+/* Footer */
 footer {
-    margin-top: 2rem;
-    border-top: 1px solid #ccc;
+    margin-top: 1em;
+    border-top: 1px solid #000;
     text-align: center;
     padding: 1rem;
-    background-color: #2c3e50;
+    background-color: steelblue;
     color: white;
 }
 
-/* Styles supplémentaires pour améliorer l'apparence */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-}
-
-header {
-    background-color: #2c3e50;
+/* Class Selectors */
+.box {
+    margin: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 1rem;
+    background-color: #eee;
+    color: #000;
 }
 
-.main-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 2rem 0;
+/* Style for temples list */
+ul.box {
+    list-style-type: none;
 }
 
-.profile-section {
-    flex: 1;
-    min-width: 300px;
-    margin-right: 2rem;
+ul.box li {
+    margin-bottom: 0.5rem;
 }
 
-.country-info {
-    flex: 0 0 300px;
+ul.box a {
+    color: steelblue;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-/* Nettoyer le float */
-.profile-section::after {
-    content: "";
-    display: table;
-    clear: both;
+ul.box a:hover {
+    text-decoration: underline;
+    color: #2a4d6e;
 }
 
-/* Responsive design */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    .main-content {
-        flex-direction: column;
-    }
-
-    .profile-section {
-        margin-right: 0;
-        margin-bottom: 2rem;
+    main {
+        padding: 0 1rem;
     }
 
     main img {
@@ -136,13 +132,25 @@ header {
         margin: 1rem auto;
     }
 
-    nav {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
     aside {
         width: 100%;
         margin: 1rem 0;
+    }
+
+    aside h2 {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin: 1rem 0;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        margin: 0 5px;
     }
 }
