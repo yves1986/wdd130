@@ -163,3 +163,11 @@ footer {
     height: 30px;
     filter: brightness(0) invert(1);
 }
+
+body::before {
+    content: "";
+    display: none;
+
+    background-color: var(--secondary-color);
+
+}
