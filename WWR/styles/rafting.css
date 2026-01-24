@@ -1,4 +1,4 @@
-/* CSS Variables */
+/* CSS Variables - Using the exact colors from instructions */
 :root {
     --primary-color: #055a05;
     /* forest green */
@@ -23,6 +23,7 @@
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
+    line-height: 1.5;
 }
 
 /* Container Width */
@@ -43,27 +44,29 @@ header {
     align-items: center;
 }
 
-header img {
+header .logo {
     width: 150px;
     height: auto;
 }
 
 nav {
     display: flex;
-    gap: 20px;
+    gap: 30px;
 }
 
 nav a {
     color: var(--accent2-color);
     text-decoration: none;
     font-weight: bold;
-    padding: 5px 10px;
+    font-size: 1.1rem;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 nav a:hover {
     background-color: var(--accent2-color);
     color: var(--primary-color);
-    border-radius: 4px;
 }
 
 /* Heading Styles */
@@ -73,90 +76,134 @@ h2 {
     color: var(--primary-color);
 }
 
-/* Basic element styling */
-nav,
-p,
-section,
-article {
-    margin: 16px;
-    padding: 8px;
-}
-
 /* Hero Section */
 .hero {
     position: relative;
+    margin: 20px 0;
 }
 
-.hero img {
+.hero-image {
     display: block;
     width: 100%;
     height: auto;
+    max-height: 500px;
+    object-fit: cover;
 }
 
-.hero h1 {
+.hero-title {
     position: absolute;
     top: 20px;
+    left: 0;
+    right: 0;
     width: 100%;
-    padding: 16px;
+    padding: 20px;
     text-align: center;
-    opacity: 0.7;
-    background-color: var(--accent1-color);
-    color: #fff;
+    opacity: 0.9;
+    background-color: rgba(38, 70, 83, 0.8);
+    /* accent1-color with opacity */
+    color: white;
+    font-size: 2.5rem;
 }
 
-.hero article {
+.hero-article {
     position: absolute;
     bottom: 40px;
-    left: 40px;
+    right: 40px;
     width: 400px;
-    background-color: rgba(233, 196, 106, 0.9);
-    padding: 20px;
-    border-radius: 8px;
+    background-color: rgba(233, 196, 106, 0.95);
+    /* accent2-color with opacity */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.hero article img {
+.client-image {
     float: right;
     width: 125px;
-    margin-left: 15px;
-    border: 2px solid var(--accent1-color);
-    border-radius: 4px;
+    height: auto;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 3px solid var(--accent1-color);
 }
 
-.hero article p {
+.hero-article p {
     text-align: justify;
     margin: 0;
     padding: 0;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 /* Section Styles */
-section {
+.history,
+.adventure {
     margin: 30px 0;
-    background-color: #f9f9f9;
-    border-radius: 8px;
+    padding: 25px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-section h2 {
-    margin-bottom: 16px;
+.history h2,
+.adventure h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+}
+
+.history p {
+    text-align: justify;
+    font-size: 1.05rem;
+    line-height: 1.7;
 }
 
 /* Footer Styles */
 footer {
     background-color: var(--primary-color);
     color: var(--accent2-color);
-    padding: 20px;
-    margin-top: 30px;
+    padding: 25px;
+    margin-top: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-top: 3px solid var(--secondary-color);
+}
+
+footer p {
+    font-size: 1.1rem;
+    font-weight: bold;
 }
 
 /* Social Media Styles */
+.socialmedia {
+    display: flex;
+    gap: 20px;
+}
+
 .socialmedia a {
     text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.socialmedia a:hover {
+    transform: scale(1.1);
 }
 
 .socialmedia img {
-    width: 30px;
-    height: 30px;
-    margin: 0 5px;
+    width: 35px;
+    height: 35px;
+    filter: brightness(0) invert(1);
+    /* Makes icons white */
+}
+
+/* Basic element styling - following instructions */
+nav,
+p,
+section,
+article {
+    margin: 16px;
+    padding: 8px;
 }
