@@ -1,14 +1,14 @@
 /* CSS Variables */
 :root {
-    --primary-color: #1a5f7a;
-    /* blue color */
+    --primary-color: #055a05;
+    /* forest green */
     --secondary-color: #f4a261;
     /* warm sand */
     --accent1-color: #264653;
-    /* dark slate */
+    /* dark slate blue */
     --accent2-color: #e9c46a;
-    /* light golden */
-    --heading-font: "Georgia", "Times New Roman", serif;
+    /* light golden yellow */
+    --heading-font: "Times New Roman", "Georgia", serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
 
@@ -23,20 +23,20 @@
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
-    line-height: 1.5;
 }
 
 /* Container Width */
 header,
 main,
 footer {
-    max-width: 840px;
+    width: 840px;
     margin: 0 auto;
 }
 
 /* Header Styles */
 header {
     background-color: var(--primary-color);
+    color: var(--accent2-color);
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -44,24 +44,25 @@ header {
 }
 
 header img {
-    height: 80px;
+    width: 150px;
+    height: auto;
 }
 
-nav ul {
+nav {
     display: flex;
-    list-style: none;
     gap: 20px;
 }
 
 nav a {
-    color: white;
+    color: var(--accent2-color);
     text-decoration: none;
     font-weight: bold;
     padding: 5px 10px;
 }
 
 nav a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: var(--accent2-color);
+    color: var(--primary-color);
     border-radius: 4px;
 }
 
@@ -72,19 +73,18 @@ h2 {
     color: var(--primary-color);
 }
 
-h1 {
-    font-size: 2.2rem;
-}
-
-h2 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
+/* Basic element styling */
+nav,
+p,
+section,
+article {
+    margin: 16px;
+    padding: 8px;
 }
 
 /* Hero Section */
 .hero {
     position: relative;
-    margin: 20px 0;
 }
 
 .hero img {
@@ -96,23 +96,20 @@ h2 {
 .hero h1 {
     position: absolute;
     top: 20px;
-    left: 0;
-    right: 0;
+    width: 100%;
+    padding: 16px;
     text-align: center;
-    padding: 15px;
-    background-color: rgba(38, 70, 83, 0.8);
-    /* accent1 with opacity */
-    color: white;
-    opacity: 0.9;
+    opacity: 0.7;
+    background-color: var(--accent1-color);
+    color: #fff;
 }
 
 .hero article {
     position: absolute;
     bottom: 40px;
-    right: 40px;
-    width: 350px;
+    left: 40px;
+    width: 400px;
     background-color: rgba(233, 196, 106, 0.9);
-    /* accent2 with opacity */
     padding: 20px;
     border-radius: 8px;
 }
@@ -121,50 +118,39 @@ h2 {
     float: right;
     width: 125px;
     margin-left: 15px;
+    border: 2px solid var(--accent1-color);
     border-radius: 4px;
 }
 
 .hero article p {
     text-align: justify;
-    font-size: 0.95rem;
+    margin: 0;
+    padding: 0;
 }
 
 /* Section Styles */
 section {
-    margin: 25px 0;
-    padding: 20px;
-    background-color: #f8f9fa;
-    border-radius: 6px;
+    margin: 30px 0;
+    background-color: #f9f9f9;
+    border-radius: 8px;
 }
 
-section p {
+section h2 {
     margin-bottom: 16px;
-    padding: 8px;
-    line-height: 1.6;
 }
 
 /* Footer Styles */
 footer {
     background-color: var(--primary-color);
-    color: white;
+    color: var(--accent2-color);
     padding: 20px;
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 3px solid var(--accent2-color);
-}
-
-footer p {
-    margin: 0;
 }
 
 /* Social Media Styles */
-.socialmedia {
-    display: flex;
-    gap: 15px;
-}
-
 .socialmedia a {
     text-decoration: none;
 }
@@ -172,46 +158,5 @@ footer p {
 .socialmedia img {
     width: 30px;
     height: 30px;
-    filter: brightness(0) invert(1);
-    /* makes icons white */
-    transition: transform 0.2s ease;
-}
-
-.socialmedia img:hover {
-    transform: scale(1.1);
-}
-
-/* Additional spacing for main sections */
-main {
-    padding: 10px 0;
-}
-
-/* Responsive adjustments */
-@media (max-width: 860px) {
-
-    header,
-    main,
-    footer {
-        max-width: 95%;
-        margin: 0 auto;
-    }
-
-    .hero article {
-        position: relative;
-        bottom: auto;
-        right: auto;
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 15px;
-    }
+    margin: 0 5px;
 }
