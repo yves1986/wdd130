@@ -56,8 +56,10 @@ nav a {
     padding: 5px 10px;
 }
 
+/* CHANGEMENT IMPORTANT ICI : */
 nav a:hover {
-    background-color: var(--accent2-color);
+    background-color: var(--secondary-color);
+    /* Utilise maintenant --secondary-color */
     color: var(--primary-color);
     border-radius: 4px;
 }
@@ -106,10 +108,10 @@ article {
     left: 40px;
     width: 400px;
     background-color: rgba(233, 196, 106, 0.9);
-    /* accent2-color with opacity */
     padding: 20px;
     border-radius: 8px;
     border: 2px solid var(--secondary-color);
+    /* Déjà présent */
 }
 
 .hero article img {
@@ -162,12 +164,4 @@ footer {
     width: 30px;
     height: 30px;
     filter: brightness(0) invert(1);
-}
-
-body::before {
-    content: "";
-    display: none;
-
-    background-color: var(--secondary-color);
-
 }
