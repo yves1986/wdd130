@@ -1,192 +1,155 @@
-/* CSS Variables */
+/* rafting.css - Version corrigée selon les exigences W03 */
+
+/* 1. Variables CSS dans :root (exigence) */
 :root {
-    --primary-color: #055a05;
-    --secondary-color: #f4a261;
-    --accent1-color: #264653;
+    --primary-color: #2a5c8b;
+    --secondary-color: #4a9cd6;
+    --accent1-color: #f4a261;
     --accent2-color: #e9c46a;
     --heading-font: "Times New Roman", "Georgia", serif;
+    /* Format exigé */
     --body-font: Arial, Helvetica, sans-serif;
+    /* Format exigé */
 }
 
-/* Reset */
-*,
-*::before,
-*::after {
+/* 2. Reset CSS (exigence) */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body */
+/* 3. Style du body avec font-family (exigence) */
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
-    line-height: 1.6;
+    /* Couleur de texte */
 }
 
-/* Limit page width */
+/* 4. Limiter la largeur et centrer (exigence) */
 header,
 main,
 footer {
-    max-width: 840px;
+    width: 840px;
     margin: 0 auto;
 }
 
-/* HEADER - CSS Grid */
-header {
-    background-color: var(--primary-color);
-    color: var(--accent2-color);
-    padding: 20px;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    /* Logo à gauche, nav à droite */
-    align-items: center;
-}
-
-/* NAV - Flex (déjà bon) */
-nav ul {
-    display: flex;
-    justify-content: flex-end;
-    list-style: none;
-    gap: 20px;
-}
-
-nav a {
-    color: var(--accent2-color);
-    text-decoration: none;
-    font-weight: bold;
-    padding: 5px 10px;
-}
-
-nav a:hover {
-    text-decoration: underline;
-    color: var(--secondary-color);
-}
-
-/* Headings */
+/* 5. Style des headings (exigence) */
 h1,
 h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
-    margin-bottom: 20px;
 }
 
-/* Basic elements */
+/* 6. Style de base pour nav, p, section, article (exigence) */
+nav,
+p,
 section,
 article {
-    margin: 20px 0;
-    padding: 20px;
+    margin: 16px;
+    padding: 8px;
 }
 
-/* Hero Section */
-.hero {
-    position: relative;
+/* 7. Enlever les underlines des liens sociaux (exigence) */
+.socialmedia a {
+    text-decoration: none;
 }
 
-.hero img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.hero h1 {
-    position: absolute;
-    top: 20px;
-    width: 100%;
-    padding: 16px;
-    text-align: center;
-    opacity: 0.9;
-    background-color: rgba(38, 70, 83, 0.8);
-    color: white;
-}
-
-.hero article {
-    position: absolute;
-    bottom: 40px;
-    left: 40px;
-    width: 400px;
-    background-color: rgba(233, 196, 106, 0.9);
-    padding: 20px;
-    border-radius: 5px;
-}
-
-.hero article img {
-    float: right;
-    width: 125px;
-    margin-left: 15px;
-    border-radius: 5px;
-}
-
-.hero article p {
-    text-align: justify;
-    margin: 0;
-    padding: 0;
-}
-
-/* History Section - Grid Layout */
-.history-content {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    gap: 20px;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.history-content img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.history-content p {
-    text-align: justify;
-    padding: 0 10px;
-}
-
-/* Adventures Section - Grid Gallery */
-.adventures {
-    background-color: rgba(5, 90, 5, 0.1);
-    padding: 30px;
-    border-radius: 8px;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 15px;
-}
-
-.gallery img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 5px;
-    border: 2px solid var(--accent1-color);
-}
-
-figure {
-    text-align: center;
-}
-
-figcaption {
-    margin-top: 8px;
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: var(--primary-color);
-}
-
-/* Footer */
-footer {
+/* 8. Style du header (optionnel mais logique) */
+header {
     background-color: var(--primary-color);
-    color: var(--accent2-color);
+    color: white;
     padding: 20px;
-    margin-top: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* Social Media */
+/* 9. Style de la navigation */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* 10. Hero DIV avec position relative (EXIGENCE CRITIQUE) */
+.hero {
+    position: relative;
+    /* Nécessaire pour positionner h1 et article en absolu */
+    margin: 20px 0;
+}
+
+/* 11. Image hero qui remplit toute la largeur (exigence) */
+.hero img {
+    display: block;
+    /* Nécessaire selon exigence */
+    width: 100%;
+    /* Remplit toute la largeur */
+    height: auto;
+    /* Garde les proportions */
+}
+
+/* 12. H1 positionné en absolu sur l'hero (exigence) */
+h1 {
+    position: absolute;
+    /* Doit être absolu */
+    top: 20px;
+    /* Position depuis le haut */
+    width: 100%;
+    /* Largeur complète */
+    padding: 16px;
+    /* Padding exigé */
+    text-align: center;
+    /* Centré */
+    opacity: 0.7;
+    /* Transparence exigée */
+    background-color: var(--accent1-color);
+    /* Avec variable */
+    color: #fff;
+    /* Texte blanc comme exigé */
+}
+
+/* 13. Article dans hero positionné en absolu */
+.hero article {
+    position: absolute;
+    /* Doit être absolu */
+    bottom: 40px;
+    /* Position depuis le bas */
+    left: 40px;
+    /* Position depuis la gauche */
+    right: 40px;
+    /* Position depuis la droite */
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Fond semi-transparent */
+    padding: 20px;
+}
+
+/* 14. Image dans l'article avec float right (EXIGENCE CRITIQUE) */
+.hero article img {
+    float: right;
+    /* Doit être flottant à droite */
+    width: 125px;
+    /* Largeur spécifique comme dans l'exemple */
+    margin: 0 0 10px 10px;
+    /* Marge pour espacement */
+}
+
+/* 15. Footer styling */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 16. Social media nav styling */
 .socialmedia {
     display: flex;
     gap: 15px;
@@ -195,59 +158,4 @@ footer {
 .socialmedia img {
     width: 30px;
     height: 30px;
-    transition: transform 0.3s;
-}
-
-.socialmedia img:hover {
-    transform: scale(1.1);
-}
-
-/* Responsive Design */
-@media (max-width: 860px) {
-
-    header,
-    main,
-    footer {
-        width: 95%;
-        padding: 15px;
-    }
-
-    .hero h1 {
-        font-size: 1.5rem;
-        padding: 10px;
-    }
-
-    .hero article {
-        position: relative;
-        width: 100%;
-        left: 0;
-        bottom: 0;
-        margin-top: 20px;
-    }
-
-    .history-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .history-content img {
-        max-width: 250px;
-        margin: 0 auto;
-    }
-
-    .gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-
-    .gallery {
-        grid-template-columns: 1fr;
-    }
 }
