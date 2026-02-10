@@ -1,15 +1,11 @@
 /* CSS Variables */
 :root {
     --primary-color: #055a05;
-    /* Green */
     --secondary-color: #f4a261;
-    /* Orange */
     --accent1-color: #264653;
-    /* Dark blue */
     --accent2-color: #e9c46a;
-    /* Light yellow */
     --text-light: #ffffff;
-    /* White */
+    --text-dark: #333333;
     --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     --border-radius: 8px;
     --transition: all 0.3s ease;
@@ -26,7 +22,7 @@
 
 body {
     font-family: var(--body-font);
-    color: var(--accent1-color);
+    color: var(--text-dark);
     line-height: 1.6;
 }
 
@@ -37,7 +33,7 @@ body {
     padding: 0 20px;
 }
 
-/* Header - CORRIGÉ pour contraste */
+/* Header */
 header {
     background-color: var(--primary-color);
     padding: 20px;
@@ -55,7 +51,6 @@ nav ul {
 
 nav a {
     color: var(--text-light);
-    /* Changé de accent2 à text-light pour contraste */
     text-decoration: none;
     font-weight: bold;
     padding: 5px 10px;
@@ -75,17 +70,14 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* Main h1 - CORRIGÉ pour contraste */
 h1 {
     text-align: center;
     margin: 30px 0;
     font-size: 2.5rem;
     padding: 20px;
     background-color: var(--text-light);
-    /* Changé à fond blanc */
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
-    /* Ajouté une ombre */
 }
 
 /* Sections Common */
@@ -95,6 +87,7 @@ section {
     background-color: var(--text-light);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
+    color: var(--text-dark);
 }
 
 /* Hero Section */
@@ -114,7 +107,6 @@ section {
     width: 100%;
     padding: 16px;
     background-color: rgba(38, 70, 83, 0.9);
-    /* Augmenté l'opacité */
     color: var(--text-light);
 }
 
@@ -124,7 +116,6 @@ section {
     left: 40px;
     width: 400px;
     background-color: rgba(233, 196, 106, 0.95);
-    /* Augmenté l'opacité */
     padding: 20px;
     border-radius: 5px;
 }
@@ -202,7 +193,7 @@ figcaption {
 }
 
 .team-gallery figcaption {
-    color: var(--accent1-color);
+    color: var(--text-dark);
     box-shadow: var(--shadow);
 }
 
@@ -214,14 +205,14 @@ figcaption {
     margin-top: 5px;
 }
 
-/* Special Sections - CORRIGÉ pour contraste */
+/* Special Sections */
 .adventures {
     background-color: rgba(5, 90, 5, 0.1);
 }
 
 .team-section {
-    background-color: rgba(5, 90, 5, 0.2);
-    /* Augmenté pour meilleur contraste */
+    background-color: rgba(5, 90, 5, 0.05);
+    color: var(--text-dark);
 }
 
 /* Section Headers */
@@ -245,7 +236,7 @@ figcaption {
 }
 
 .contact-details h3 {
-    color: var(--accent1-color);
+    color: var(--primary-color);
     margin-bottom: 20px;
     font-size: 1.5rem;
 }
@@ -253,6 +244,7 @@ figcaption {
 .contact-details p {
     margin-bottom: 15px;
     line-height: 1.6;
+    color: var(--text-dark);
 }
 
 .contact-details strong {
@@ -262,6 +254,12 @@ figcaption {
 }
 
 /* Map */
+.map-container h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
 .map-container iframe {
     width: 100%;
     height: 300px;
@@ -286,7 +284,7 @@ figcaption {
 .form-group label {
     display: block;
     margin-bottom: 8px;
-    color: var(--accent1-color);
+    color: var(--primary-color);
     font-weight: bold;
     font-size: 1rem;
 }
@@ -349,7 +347,7 @@ figcaption {
 
 .radio-option span,
 .checkbox-option span {
-    color: var(--accent1-color);
+    color: var(--text-dark);
     font-weight: normal;
 }
 
@@ -376,11 +374,10 @@ figcaption {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Footer - CORRIGÉ pour contraste */
+/* Footer */
 footer {
     background-color: var(--primary-color);
     color: var(--text-light);
-    /* Changé de accent2 à text-light */
     padding: 20px;
     margin-top: 30px;
     display: flex;
@@ -402,6 +399,7 @@ footer {
     height: 32px;
     border-radius: 4px;
     transition: var(--transition);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .socialmedia img {
@@ -412,8 +410,7 @@ footer {
 }
 
 .socialmedia a:hover {
-    background-color: rgba(233, 196, 106, 0.3);
-    /* Augmenté l'opacité */
+    background-color: rgba(233, 196, 106, 0.4);
 }
 
 .socialmedia img:hover {
