@@ -70,6 +70,16 @@ h2 {
     margin-bottom: 20px;
 }
 
+/* Main h1 specific style */
+main h1 {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 2.5rem;
+    padding: 20px;
+    background-color: rgba(5, 90, 5, 0.1);
+    border-radius: 8px;
+}
+
 /* Basic elements */
 section,
 article {
@@ -189,7 +199,6 @@ footer {
 }
 
 /* Social Media */
-/* Social Media - Improved for better visibility */
 .socialmedia {
     display: flex;
     gap: 15px;
@@ -201,63 +210,23 @@ footer {
     justify-content: center;
     width: 32px;
     height: 32px;
-    background-color: rgba(255, 255, 255, 0.15);
     border-radius: 4px;
     transition: all 0.3s ease;
 }
 
 .socialmedia img {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     filter: brightness(0) invert(1);
-    /* Makes icons white */
     transition: transform 0.3s;
 }
 
 .socialmedia a:hover {
-    background-color: rgba(233, 196, 106, 0.3);
-    transform: translateY(-2px);
+    background-color: rgba(233, 196, 106, 0.2);
 }
 
 .socialmedia img:hover {
     transform: scale(1.1);
-}
-
-/* Footer text styling for two lines */
-footer p {
-    margin: 0;
-    line-height: 1.4;
-    font-size: 0.9rem;
-    text-align: left;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    footer {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-
-    footer p {
-        text-align: center;
-        order: 2;
-    }
-
-    .socialmedia {
-        order: 1;
-        gap: 12px;
-    }
-
-    .socialmedia a {
-        width: 28px;
-        height: 28px;
-    }
-
-    .socialmedia img {
-        width: 18px;
-        height: 18px;
-    }
 }
 
 /* === CONTACT PAGE SPECIFIC STYLES === */
@@ -274,6 +243,9 @@ footer p {
     color: var(--primary-color);
     margin-bottom: 30px;
     font-size: 2rem;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .info-content {
@@ -322,9 +294,10 @@ footer p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Team Section */
+/* Team Section - CORRIGÉ pour meilleur contraste */
 .team-section {
-    background-color: rgba(5, 90, 5, 0.05);
+    background-color: rgba(5, 90, 5, 0.08);
+    /* Opacité augmentée pour meilleur contraste */
     padding: 40px 20px;
     margin: 20px 0;
 }
@@ -334,6 +307,9 @@ footer p {
     color: var(--primary-color);
     margin-bottom: 30px;
     font-size: 2rem;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .team-gallery {
@@ -379,9 +355,11 @@ footer p {
     color: var(--primary-color);
 }
 
+/* Job Title - CORRIGÉ pour meilleur contraste */
 .job-title {
-    color: var(--secondary-color);
-    font-weight: normal;
+    color: var(--primary-color);
+    /* Changé de secondary à primary pour meilleur contraste */
+    font-weight: bold;
     font-size: 0.9rem;
     display: block;
     margin-top: 5px;
@@ -399,6 +377,9 @@ footer p {
     color: var(--primary-color);
     margin-bottom: 30px;
     font-size: 2rem;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .contact-form {
@@ -576,6 +557,11 @@ footer p {
     .gallery {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    main h1 {
+        font-size: 2rem;
+        padding: 15px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -640,5 +626,10 @@ footer p {
     .radio-option,
     .checkbox-option {
         padding: 8px 12px;
+    }
+
+    main h1 {
+        font-size: 1.5rem;
+        padding: 10px;
     }
 }
