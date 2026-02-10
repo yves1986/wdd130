@@ -37,7 +37,7 @@ body {
     padding: 0 20px;
 }
 
-/* Header */
+/* Header - CORRIGÉ pour contraste */
 header {
     background-color: var(--primary-color);
     padding: 20px;
@@ -54,7 +54,8 @@ nav ul {
 }
 
 nav a {
-    color: var(--accent2-color);
+    color: var(--text-light);
+    /* Changé de accent2 à text-light pour contraste */
     text-decoration: none;
     font-weight: bold;
     padding: 5px 10px;
@@ -74,13 +75,17 @@ h2 {
     margin-bottom: 20px;
 }
 
+/* Main h1 - CORRIGÉ pour contraste */
 h1 {
     text-align: center;
     margin: 30px 0;
     font-size: 2.5rem;
     padding: 20px;
-    background-color: rgba(5, 90, 5, 0.15);
+    background-color: var(--text-light);
+    /* Changé à fond blanc */
     border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    /* Ajouté une ombre */
 }
 
 /* Sections Common */
@@ -108,9 +113,9 @@ section {
     top: 20px;
     width: 100%;
     padding: 16px;
-    background-color: rgba(38, 70, 83, 0.8);
+    background-color: rgba(38, 70, 83, 0.9);
+    /* Augmenté l'opacité */
     color: var(--text-light);
-    opacity: 0.9;
 }
 
 .hero article {
@@ -118,7 +123,8 @@ section {
     bottom: 40px;
     left: 40px;
     width: 400px;
-    background-color: rgba(233, 196, 106, 0.9);
+    background-color: rgba(233, 196, 106, 0.95);
+    /* Augmenté l'opacité */
     padding: 20px;
     border-radius: 5px;
 }
@@ -208,13 +214,14 @@ figcaption {
     margin-top: 5px;
 }
 
-/* Special Sections */
+/* Special Sections - CORRIGÉ pour contraste */
 .adventures {
     background-color: rgba(5, 90, 5, 0.1);
 }
 
 .team-section {
-    background-color: rgba(5, 90, 5, 0.12);
+    background-color: rgba(5, 90, 5, 0.2);
+    /* Augmenté pour meilleur contraste */
 }
 
 /* Section Headers */
@@ -369,10 +376,11 @@ figcaption {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Footer */
+/* Footer - CORRIGÉ pour contraste */
 footer {
     background-color: var(--primary-color);
-    color: var(--accent2-color);
+    color: var(--text-light);
+    /* Changé de accent2 à text-light */
     padding: 20px;
     margin-top: 30px;
     display: flex;
@@ -404,7 +412,8 @@ footer {
 }
 
 .socialmedia a:hover {
-    background-color: rgba(233, 196, 106, 0.2);
+    background-color: rgba(233, 196, 106, 0.3);
+    /* Augmenté l'opacité */
 }
 
 .socialmedia img:hover {
