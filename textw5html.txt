@@ -13,12 +13,14 @@
 
 <body>
     <header>
-        <img src="images/logo.png" alt="Rapids! Rafting Company Logo">
+        <img src="images/logo.png" alt="Rapids! Rafting Company Logo" width="150">
         <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="trips.html">Trips</a>
-            <a href="contact.html">Contact Us</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -27,17 +29,19 @@
 
         <section class="company-info">
             <h2>Company Information</h2>
-            <div class="info-grid">
-                <div class="company-details">
+            <div class="info-content">
+                <div class="contact-details">
                     <h3>White Water Rafting Company</h3>
-                    <p>📍 123 Main River Street<br>Kolob, California</p>
-                    <p>📞 +1 999 999 9999</p>
-                    <p>✉️ info@whitewater.com</p>
+                    <p><strong>Address:</strong><br>123 Main River Street<br>Kolob, California</p>
+                    <p><strong>Phone:</strong><br>+1 999 999 9999</p>
+                    <p><strong>Email:</strong><br>info@whitewater.com</p>
                 </div>
                 <div class="map-container">
+                    <h3>Our Location</h3>
                     <iframe
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3197.604240146298!2d-119.78796568471212!3d36.732064979962736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80945e26d4340503%3A0xb32dda71cf0730a0!2sCalifornia%2C%20USA!5e0!3m2!1sen!2s!4v1638346817978!5m2!1sen!2s"
-                      allowfullscreen loading="lazy" title="Rapids! Rafting Company Location">
+                      allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                      title="Rapids! Rafting Company Location">
                     </iframe>
                 </div>
             </div>

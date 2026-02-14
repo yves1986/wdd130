@@ -1,0 +1,510 @@
+/* CSS Variables */
+:root {
+    --primary-color: #055a05;
+    --secondary-color: #f4a261;
+    --accent1-color: #264653;
+    --accent2-color: #e9c46a;
+    --text-light: #ffffff;
+    --text-dark: #333333;
+    --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+    --heading-font: "Times New Roman", Georgia, serif;
+    --body-font: Arial, Helvetica, sans-serif;
+}
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Layout Container */
+.container {
+    max-width: 840px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    list-style: none;
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: var(--transition);
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: var(--secondary-color);
+}
+
+/* Typography */
+h1,
+h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 2.5rem;
+    padding: 20px;
+    background-color: var(--text-light);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+/* Sections Common */
+section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: var(--text-light);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    color: var(--text-dark);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 16px;
+    background-color: rgba(38, 70, 83, 0.9);
+    color: var(--text-light);
+}
+
+.hero article {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    width: 400px;
+    background-color: rgba(233, 196, 106, 0.95);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.hero article img {
+    float: right;
+    width: 125px;
+    margin-left: 15px;
+    border-radius: 5px;
+}
+
+/* History Section */
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.history-content img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Gallery Common */
+.gallery,
+.team-gallery {
+    display: grid;
+    gap: 20px;
+}
+
+.gallery {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.team-gallery {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.gallery img,
+.team-gallery img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    border: 3px solid var(--primary-color);
+}
+
+.gallery img {
+    height: 150px;
+    object-fit: cover;
+}
+
+.team-gallery img {
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Gallery Items */
+figure {
+    text-align: center;
+    margin: 0;
+}
+
+figcaption {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: var(--text-light);
+    border-radius: var(--border-radius);
+    font-weight: bold;
+}
+
+.gallery figcaption {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+
+.team-gallery figcaption {
+    color: var(--text-dark);
+    box-shadow: var(--shadow);
+}
+
+.job-title {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 0.9rem;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Special Sections */
+.adventures {
+    background-color: rgba(5, 90, 5, 0.1);
+}
+
+.team-section {
+    background-color: rgba(5, 90, 5, 0.05);
+    color: var(--text-dark);
+}
+
+/* Section Headers */
+.company-info h2,
+.team-section h2,
+.contact-form-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    padding: 15px;
+    background-color: var(--text-light);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+}
+
+/* Company Info */
+.info-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.contact-details h3 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.contact-details p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+.contact-details strong {
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Map */
+.map-container h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-family: var(--body-font);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(5, 90, 5, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* Form Options */
+.radio-options,
+.checkbox-group {
+    margin-top: 10px;
+}
+
+.radio-option,
+.checkbox-option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: var(--text-light);
+    border: 2px solid #eee;
+    border-radius: 6px;
+    transition: var(--transition);
+}
+
+.radio-option:hover,
+.checkbox-option:hover {
+    border-color: var(--secondary-color);
+    background-color: rgba(244, 162, 97, 0.05);
+}
+
+.radio-option input[type="radio"],
+.checkbox-option input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary-color);
+}
+
+.radio-option span,
+.checkbox-option span {
+    color: var(--text-dark);
+    font-weight: normal;
+}
+
+/* Submit Button */
+.submit-button {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+.submit-button:hover {
+    background-color: #034a03;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 20px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Social Media */
+.socialmedia {
+    display: flex;
+    gap: 15px;
+}
+
+.socialmedia a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    transition: var(--transition);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.socialmedia img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+    transition: var(--transition);
+}
+
+.socialmedia a:hover {
+    background-color: rgba(233, 196, 106, 0.4);
+}
+
+.socialmedia img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 860px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .hero article {
+        position: relative;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        margin-top: 20px;
+    }
+
+    .history-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    h1 {
+        font-size: 2rem;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 15px;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    .info-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .socialmedia a {
+        width: 28px;
+        height: 28px;
+    }
+
+    .socialmedia img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .gallery,
+    .team-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    .socialmedia a {
+        width: 26px;
+        height: 26px;
+    }
+
+    .socialmedia img {
+        width: 18px;
+        height: 18px;
+    }
+}
