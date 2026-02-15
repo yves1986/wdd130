@@ -116,8 +116,8 @@ h2 {
     margin: 0;
 }
 
-/* Article Hero - CENTRÉ (modification ici) */
-.hero .hero-article {
+/* CORRECTION: Utiliser .hero article au lieu de .hero .hero-article */
+.hero article {
     position: absolute;
     bottom: 40px;
     left: 50%;
@@ -130,7 +130,8 @@ h2 {
     box-shadow: var(--shadow);
 }
 
-.hero .hero-article img {
+/* CORRECTION: Utiliser .hero article img au lieu de .hero .hero-article img */
+.hero article img {
     float: right;
     width: 140px;
     margin: 0 0 10px 20px;
@@ -138,7 +139,7 @@ h2 {
     border: 3px solid var(--primary-color);
 }
 
-.hero .hero-article p {
+.hero article p {
     color: var(--text-dark);
     font-size: 1rem;
     line-height: 1.6;
@@ -903,7 +904,7 @@ footer p {
         padding: 15px;
     }
 
-    .hero .hero-article {
+    .hero article {
         position: relative;
         width: 90%;
         left: 50%;
@@ -911,7 +912,7 @@ footer p {
         margin: 20px auto;
     }
 
-    .hero .hero-article img {
+    .hero article img {
         float: none;
         display: block;
         margin: 0 auto 15px;
