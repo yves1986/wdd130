@@ -190,7 +190,7 @@ h2 {
     font-size: 1.2rem;
 }
 
-/* ===== PARTIE 3: Map + Formulaire côte à côte ===== */
+/* ===== PARTIE 3: Map + Formulaire côte à côte (HAUTEUR CORRIGÉE 520px) ===== */
 .map-form-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -200,9 +200,10 @@ h2 {
     max-width: 1200px;
 }
 
-/* Carte à gauche */
+/* Carte à gauche - HAUTEUR FIXE 520px */
 .map-left {
     width: 100%;
+    height: 520px;
 }
 
 .map-left .map-container {
@@ -212,15 +213,16 @@ h2 {
 
 .map-left .map-container iframe {
     width: 100%;
-    height: 500px;
+    height: 100%;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
     border: 0;
 }
 
-/* Formulaire à droite */
+/* Formulaire à droite - MÊME HAUTEUR 520px */
 .form-right {
     width: 100%;
+    height: 520px;
 }
 
 .contact-form-compact {
@@ -229,10 +231,17 @@ h2 {
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
 }
 
 .contact-form-compact .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+}
+
+.contact-form-compact .form-group:last-of-type {
+    margin-bottom: 10px;
 }
 
 .contact-form-compact .form-group label {
@@ -247,7 +256,7 @@ h2 {
 .contact-form-compact input[type="email"],
 .contact-form-compact textarea {
     width: 100%;
-    padding: 12px 15px;
+    padding: 10px 12px;
     border: 2px solid #ddd;
     border-radius: 6px;
     font-family: var(--body-font);
@@ -264,7 +273,7 @@ h2 {
 
 .contact-form-compact textarea {
     resize: vertical;
-    min-height: 120px;
+    min-height: 100px;
 }
 
 /* Radio Options */
@@ -325,7 +334,7 @@ h2 {
     background-color: var(--primary-color);
     color: var(--text-light);
     border: none;
-    padding: 15px 30px;
+    padding: 12px 30px;
     font-size: 1.1rem;
     font-weight: bold;
     border-radius: 6px;
@@ -333,7 +342,7 @@ h2 {
     width: 100%;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-top: 20px;
+    margin-top: 10px;
     transition: var(--transition);
 }
 
@@ -455,8 +464,13 @@ footer p {
         gap: 20px;
     }
 
-    .map-left .map-container iframe {
+    .map-left {
         height: 400px;
+    }
+
+    .form-right {
+        height: auto;
+        min-height: 520px;
     }
 }
 
@@ -544,7 +558,7 @@ footer p {
         margin: 0 auto;
     }
 
-    .map-left .map-container iframe {
+    .map-left {
         height: 300px;
     }
 
