@@ -2,8 +2,6 @@
 :root {
     --primary-color: #055a05;
     --secondary-color: #f4a261;
-    --accent1-color: #264653;
-    --accent2-color: #e9c46a;
     --text-light: #ffffff;
     --text-dark: #333333;
     --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -36,7 +34,7 @@ body {
     padding: 0 20px;
 }
 
-/* Header - avec CSS Grid (pour toutes les pages) */
+/* Header - avec CSS Grid */
 header {
     background-color: var(--primary-color);
     padding: 20px;
@@ -50,7 +48,7 @@ header img {
     height: auto;
 }
 
-/* Navigation - avec CSS Flex (pour toutes les pages) */
+/* Navigation - avec CSS Flex */
 nav ul {
     display: flex;
     justify-content: flex-end;
@@ -87,7 +85,7 @@ h1 {
 
 h2 {
     font-family: var(--heading-font);
-    color: var(--primary-color);
+    color: var(--text-dark);
     margin-bottom: 20px;
 }
 
@@ -118,33 +116,37 @@ h2 {
     margin: 0;
 }
 
-.hero article {
+/* Article Hero - CENTRÉ (modification ici) */
+.hero .hero-article {
     position: absolute;
     bottom: 40px;
-    left: 40px;
-    width: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 800px;
     background-color: rgba(233, 196, 106, 0.95);
-    padding: 20px;
-    border-radius: 5px;
+    padding: 25px 30px;
+    border-radius: var(--border-radius);
     box-shadow: var(--shadow);
 }
 
-.hero article img {
+.hero .hero-article img {
     float: right;
-    width: 125px;
-    margin-left: 15px;
+    width: 140px;
+    margin: 0 0 10px 20px;
     border-radius: 5px;
     border: 3px solid var(--primary-color);
 }
 
-.hero article p {
+.hero .hero-article p {
     color: var(--text-dark);
-    font-size: 0.95rem;
-    line-height: 1.5;
+    font-size: 1rem;
+    line-height: 1.6;
     text-align: left;
+    margin: 0;
 }
 
-/* History Section - AVEC IMAGE AU MILIEU */
+/* History Section - avec image au milieu */
 .history {
     margin: 40px 0;
     padding: 20px;
@@ -155,7 +157,7 @@ h2 {
 
 .history h2 {
     text-align: center;
-    color: var(--primary-color);
+    color: var(--text-dark);
     margin-bottom: 30px;
 }
 
@@ -187,17 +189,17 @@ h2 {
     box-shadow: var(--shadow);
 }
 
-/* Adventure Section - 5 IMAGES HORIZONTALES */
+/* Adventure Section - 5 images horizontales */
 .adventure {
     margin: 40px 0;
     padding: 20px;
-    background-color: rgba(5, 90, 5, 0.05);
+    background-color: rgba(5, 90, 5, 0.08);
     border-radius: var(--border-radius);
 }
 
 .adventure h2 {
     text-align: center;
-    color: var(--primary-color);
+    color: var(--text-dark);
     margin-bottom: 30px;
 }
 
@@ -238,7 +240,7 @@ h2 {
     font-size: 0.9rem;
 }
 
-/* Gallery Items (général) */
+/* Gallery Items */
 figure {
     text-align: center;
     margin: 0;
@@ -252,7 +254,7 @@ figcaption {
     font-weight: bold;
 }
 
-/* Gallery (pour about.html si utilisé) */
+/* Gallery (si utilisé) */
 .gallery {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -901,15 +903,15 @@ footer p {
         padding: 15px;
     }
 
-    .hero article {
+    .hero .hero-article {
         position: relative;
         width: 90%;
-        left: 0;
-        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
         margin: 20px auto;
     }
 
-    .hero article img {
+    .hero .hero-article img {
         float: none;
         display: block;
         margin: 0 auto 15px;
