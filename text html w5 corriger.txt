@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+      content="Contact Rapids! Rafting Company for booking, inquiries, or information about our white water rafting adventures.">
+    <meta name="author" content="GNENESSEMIN DJEAMIN YVES">
+    <title>Contact Us - Rapids! Rafting Company</title>
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.png" alt="Rapids! Rafting Company Logo" width="150">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Contact Rapids! Rafting Company</h1>
+
+        <!-- PARTIE 2: Company Details CENTRÉE -->
+        <section class="company-details-centered">
+            <h2>White Water Rafting Company</h2>
+            <div class="company-info-centered">
+                <p class="address">📍 123 Main River Street<br>Kolob, California</p>
+                <p class="phone">📞 +1 999 999 9999</p>
+                <p class="email">✉️ info@whitewater.com</p>
+            </div>
+        </section>
+
+        <!-- PARTIE 3: Carte à gauche + Formulaire à droite -->
+        <section class="map-form-section">
+            <!-- Carte à gauche -->
+            <div class="map-left">
+                <div class="map-container">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3197.604240146298!2d-119.78796568471212!3d36.732064979962736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80945e26d4340503%3A0xb32dda71cf0730a0!2sCalifornia%2C%20USA!5e0!3m2!1sen!2s!4v1638346817978!5m2!1sen!2s"
+                      allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                      title="Rapids! Rafting Company Location">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Formulaire à droite -->
+            <div class="form-right">
+                <form class="contact-form-compact" action="submit_form.php" method="post">
+                    <div class="form-group">
+                        <label for="user-name">Your Name</label>
+                        <input type="text" id="user-name" name="user_name"
+                          placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="user-email">Your Email Address</label>
+                        <input type="email" id="user-email" name="user_email"
+                          placeholder="your.email@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Message Purpose</label>
+                        <div class="radio-options-compact">
+                            <label class="radio-option">
+                                <input type="radio" id="general-inquiry" name="message_purpose"
+                                  value="general_inquiry" checked>
+                                <span>General Inquiry</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" id="reservation-question" name="message_purpose"
+                                  value="reservation_question">
+                                <span>Reservation Question</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" id="website-suggestion" name="message_purpose"
+                                  value="website_suggestion">
+                                <span>Website Suggestion</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="user-message">Your Message</label>
+                        <textarea id="user-message" name="user_message"
+                          placeholder="Type your message here..." rows="6" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-option">
+                            <input type="checkbox" id="newsletter" name="newsletter_subscription"
+                              checked>
+                            <span>Please Subscribe me to the monthly newsletter</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="submit-button-compact">Send Your Message</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- PARTIE 4: Team Section -->
+        <section class="team-section">
+            <h2>Our Team</h2>
+            <div class="team-gallery">
+                <figure>
+                    <img src="images/employee1.jpeg" alt="John Davis - Adventure Specialist">
+                    <figcaption>John Davis<br><span class="job-title">Adventure Specialist</span>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="images/employee2.jpg" alt="Sarah Miller - Safety Instructor">
+                    <figcaption>Sarah Miller<br><span class="job-title">Safety Instructor</span>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="images/employee3.jpeg" alt="Mike Johnson - Trip Coordinator">
+                    <figcaption>Mike Johnson<br><span class="job-title">Trip Coordinator</span>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <!-- PARTIE 5: Footer avec icônes sociales -->
+    <footer>
+        <p>©2026 Rapids! Rafting Company | GNENESSEMIN DJEAMIN YVES</p>
+        <nav class="socialmedia">
+            <a href="https://facebook.com">
+                <img src="images/facebook.svg" alt="Follow us on facebook">
+            </a>
+            <a href="https://linkedin.com">
+                <img src="images/linkedin.svg" alt="Connect with us on linkedIn">
+            </a>
+            <a href="https://instagram.com">
+                <img src="images/instagram.svg" alt="Follow us on instagram">
+            </a>
+        </nav>
+    </footer>
+</body>
+
+</html>
