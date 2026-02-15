@@ -116,7 +116,6 @@ h2 {
     margin: 0;
 }
 
-/* CORRECTION: Utiliser .hero article au lieu de .hero .hero-article */
 .hero article {
     position: absolute;
     bottom: 40px;
@@ -130,7 +129,6 @@ h2 {
     box-shadow: var(--shadow);
 }
 
-/* CORRECTION: Utiliser .hero article img au lieu de .hero .hero-article img */
 .hero article img {
     float: right;
     width: 140px;
@@ -456,11 +454,12 @@ figcaption {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* ===== TEAM SECTION - CORRECTIONS DE CONTRASTE ===== */
 .team-section {
     margin: 40px auto;
     padding: 40px 20px;
     max-width: 1200px;
-    background-color: rgba(5, 90, 5, 0.05);
+    background-color: rgba(5, 90, 5, 0.3);
     border-radius: var(--border-radius);
 }
 
@@ -468,7 +467,7 @@ figcaption {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 40px;
-    color: var(--primary-color);
+    color: var(--text-light);
 }
 
 .team-gallery {
@@ -496,15 +495,15 @@ figcaption {
 .team-gallery figcaption {
     margin-top: 15px;
     padding: 10px;
-    background-color: var(--text-light);
+    background-color: rgba(5, 90, 5, 0.2);
     border-radius: var(--border-radius);
     font-weight: bold;
-    color: var(--text-dark);
+    color: var(--text-light);
     box-shadow: var(--shadow);
 }
 
 .job-title {
-    color: var(--primary-color);
+    color: var(--text-light);
     font-weight: bold;
     font-size: 0.9rem;
     display: block;
