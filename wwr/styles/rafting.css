@@ -85,15 +85,20 @@ h2 {
     margin-bottom: 20px;
 }
 
+/* ===== ABOUT PAGE STYLES ===== */
+
 /* Hero Section (pour about.html) */
 .hero {
     position: relative;
+    margin-bottom: 40px;
 }
 
 .hero img {
     width: 100%;
     height: auto;
     display: block;
+    min-height: 400px;
+    object-fit: cover;
 }
 
 .hero h1 {
@@ -103,6 +108,8 @@ h2 {
     padding: 16px;
     background-color: rgba(38, 70, 83, 0.9);
     color: var(--text-light);
+    font-size: 2.5rem;
+    margin: 0;
 }
 
 .hero article {
@@ -112,51 +119,102 @@ h2 {
     width: 400px;
     background-color: rgba(233, 196, 106, 0.95);
     padding: 20px;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
 }
 
 .hero article img {
     float: right;
     width: 125px;
     margin-left: 15px;
-    border-radius: 5px;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
+}
+
+.hero article p {
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-align: left;
 }
 
 /* History Section (pour about.html) */
-.history-content {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+.history {
+    padding: 40px 20px;
+    background-color: var(--text-light);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin: 40px 0;
+}
+
+.history h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.history p {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Adventure Section - HORIZONTAL (pour about.html) */
+.adventure {
+    padding: 40px 20px;
+    background-color: rgba(5, 90, 5, 0.05);
+    border-radius: var(--border-radius);
+    margin: 40px 0;
+}
+
+.adventure h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+}
+
+.adventure-gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     gap: 20px;
-    align-items: center;
-    margin-top: 20px;
+    flex-wrap: wrap;
 }
 
-.history-content img {
-    width: 100%;
-    border-radius: 5px;
+.adventure-gallery figure {
+    text-align: center;
+    margin: 0;
+    flex: 1 1 180px;
+    min-width: 150px;
 }
 
-/* Gallery (pour about.html) */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
-}
-
-.gallery img {
+.adventure-gallery img {
     width: 100%;
     height: 150px;
     object-fit: cover;
     border-radius: var(--border-radius);
     border: 3px solid var(--primary-color);
+    transition: var(--transition);
+    box-shadow: var(--shadow);
 }
 
-.gallery figcaption {
+.adventure-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.adventure-gallery figcaption {
+    margin-top: 10px;
+    font-weight: bold;
     color: var(--primary-color);
     font-size: 0.9rem;
 }
 
-/* Gallery Items */
+/* Gallery Items (général) */
 figure {
     text-align: center;
     margin: 0;
@@ -170,7 +228,7 @@ figcaption {
     font-weight: bold;
 }
 
-/* ===== CONTACT PAGE STYLES (from your previous work) ===== */
+/* ===== CONTACT PAGE STYLES ===== */
 
 /* Company Details CENTRÉE */
 .company-details-centered {
@@ -764,6 +822,7 @@ footer p {
     border-radius: 50%;
     transition: var(--transition);
     background-color: rgba(255, 255, 255, 0.2);
+    text-decoration: none;
 }
 
 .socialmedia img {
@@ -808,6 +867,10 @@ footer p {
         height: auto;
         min-height: 520px;
     }
+
+    .hero article {
+        width: 350px;
+    }
 }
 
 @media (max-width: 860px) {
@@ -818,10 +881,10 @@ footer p {
 
     .hero article {
         position: relative;
-        width: 100%;
+        width: 90%;
         left: 0;
         bottom: 0;
-        margin-top: 20px;
+        margin: 20px auto;
     }
 
     .history-content {
@@ -912,6 +975,14 @@ footer p {
         width: 20px;
         height: 20px;
     }
+
+    .adventure-gallery {
+        justify-content: center;
+    }
+
+    .adventure-gallery figure {
+        flex: 0 1 200px;
+    }
 }
 
 @media (max-width: 568px) {
@@ -1000,5 +1071,15 @@ footer p {
     .socialmedia img {
         width: 18px;
         height: 18px;
+    }
+
+    .adventure-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .adventure-gallery figure {
+        width: 100%;
+        max-width: 300px;
     }
 }
